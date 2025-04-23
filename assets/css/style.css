@@ -1939,6 +1939,116 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .clients-item { min-width: calc(25% - 38px); }
 
+/*-----------------------------------*\
+  #TAKES
+\*-----------------------------------*/
+
+.takes-categories {
+  margin-bottom: 30px;
+}
+
+.categories-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.category-btn {
+  background: var(--eerie-black-2);
+  color: var(--neon-green);
+  border: 1px solid var(--neon-green);
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: var(--transition-1);
+  text-transform: uppercase;
+  font-family: var(--ff-hacker);
+  font-size: var(--fs-7);
+}
+
+.category-btn:hover,
+.category-item.active .category-btn {
+  background: var(--neon-green);
+  color: var(--smoky-black);
+  box-shadow: 0 0 10px var(--neon-green);
+}
+
+.take-group {
+  display: none;
+  animation: fade 0.5s ease;
+}
+
+.take-group.active {
+  display: block;
+}
+
+.take-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.take-card {
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border: 1px solid var(--neon-green);
+  position: relative;
+  transition: var(--transition-1);
+}
+
+.take-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px var(--neon-green);
+}
+
+.take-card::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  z-index: -1;
+}
+
+.take-title {
+  color: var(--neon-green);
+  margin-bottom: 10px;
+  font-size: var(--fs-5);
+}
+
+.take-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.take-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+  border-top: 1px solid var(--neon-green);
+  padding-top: 10px;
+}
+
+.take-group-title {
+  margin-bottom: 20px;
+  color: var(--neon-green);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: var(--light-gray-70);
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .categories-list {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
 
 
   /**
