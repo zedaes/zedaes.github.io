@@ -211,9 +211,14 @@
             <button class="navbar-link" data-nav-link>Contact</button>
           </li>
 
-            <li class="navbar-item">
-              <a href="orbs.html" class="navbar-link" data-nav-link target="_blank" rel="noopener noreferrer" onmouseover="this.classList.add('glow')" onmouseout="this.classList.remove('glow')" onclick="window.close()">Orbs</a>
-            </li>
+          <li class="navbar-item">
+          <a href="orbs.html" class="navbar-link" data-nav-link rel="noopener noreferrer" 
+             onmouseover="this.classList.add('glow')" 
+             onmouseout="this.classList.remove('glow')" 
+             onclick="event.preventDefault(); window.open(this.href, '_blank'); window.close();">
+            Orbs
+          </a>
+        </li>
 
         </ul>
 
