@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Interactive bubble logic
     const interBubble = document.querySelector('.interactive');
     let curX = 0, curY = 0, tgX = 0, tgY = 0;
+    let isDragging = false;
 
     function animate() {
         curX += (tgX - curX) / 20;
@@ -10,10 +11,34 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animate);
     }
 
+    // Mouse movement
     window.addEventListener('mousemove', ({ clientX, clientY }) => {
         tgX = clientX;
         tgY = clientY;
     });
+
+    // Touch movement
+    window.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        handleTouchMove(e);
+    });
+
+    window.addEventListener('touchmove', (e) => {
+        if (isDragging) {
+            handleTouchMove(e);
+            e.preventDefault(); // Prevent scrolling
+        }
+    });
+
+    window.addEventListener('touchend', () => {
+        isDragging = false;
+    });
+
+    function handleTouchMove(e) {
+        const touch = e.touches[0];
+        tgX = touch.clientX;
+        tgY = touch.clientY;
+    }
 
     animate();
 
