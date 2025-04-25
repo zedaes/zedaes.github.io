@@ -226,7 +226,7 @@ body {
 }
 
 /*-----------------------------------*\
-  #REUSED STYLE
+  #REUSED avat
 \*-----------------------------------*/
 
 .sidebar,
@@ -1296,7 +1296,7 @@ main {
   background: var(--light-gray-70);
   width: 4px;
   height: 4px;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .blog-item-title {
@@ -1508,7 +1508,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .icon-box {
     width: 48px;
     height: 48px;
-    border-radius: 12px;
+    border-radius: 0;
     font-size: 18px;
   }
 
@@ -1538,7 +1538,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { gap: 25px; }
 
-  .avatar-box { border-radius: 30px; }
+  .avatar-box { border-radius: 0; }
 
   .avatar-box img { width: 120px; }
 
@@ -1574,7 +1574,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * #NAVBAR
    */
 
-  .navbar { border-radius: 20px 20px 0 0; }
+  .navbar { border-radius: 0 0 0 0; }
 
   .navbar-list { gap: 20px; }
 
@@ -1650,7 +1650,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     align-items: stretch;
     gap: 25px;
     padding: 30px;
-    border-radius: 20px;
+    border-radius: 0;
   }
 
   .modal-img-wrapper {
@@ -1707,7 +1707,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * #PORTFOLIO, BLOG
    */
 
-  .project-img, .blog-banner-box { border-radius: 16px; }
+  .project-img, .blog-banner-box { border-radius: 0; }
 
   .blog-posts-list { gap: 30px; }
 
@@ -1721,7 +1721,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .mapbox {
     height: 380px;
-    border-radius: 18px;
+    border-radius: 0;
   }
 
   .input-wrapper {
@@ -1906,7 +1906,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     left: auto;
     right: 0;
     width: max-content;
-    border-radius: 0 20px;
+    border-radius: 0 0;
     padding: 0 20px;
     box-shadow: none;
   }
@@ -2082,7 +2082,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   body::-webkit-scrollbar-thumb {
     border: 5px solid var(--smoky-black);
     background: hsla(0, 0%, 100%, 0.1);
-    border-radius: 20px;
+    border-radius: 0;
     box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
                 inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
   }
