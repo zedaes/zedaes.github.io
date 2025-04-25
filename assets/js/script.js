@@ -109,20 +109,25 @@ const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
+navigationLinks.forEach(link => {
+  link.addEventListener("click", function () {
+    const targetPage = this.innerHTML.toLowerCase();
+
+    pages.forEach(page => {
+      if (page.dataset.page === targetPage) {
+        page.classList.add("active");
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        page.classList.remove("active");
       }
-    }
+    });
+
+    navigationLinks.forEach(nav => nav.classList.remove("active"));
+    this.classList.add("active");
+
+    window.scrollTo(0, 0);
   });
-}
+});
+
 
 // Takes section functionality
 // Update your existing JS with this:

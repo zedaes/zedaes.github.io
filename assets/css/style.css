@@ -2043,12 +2043,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-style: italic;
 }
 
-@media (min-width: 768px) {
-  .categories-list {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-
 
 
   /**
@@ -2190,4 +2184,79 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+/* Responsive layout fix for Takes section */
+
+.takes-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.categories-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.category-item {
+  list-style: none;
+}
+
+.category-btn {
+  padding: 10px 15px;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  border: 1px solid var(--neon-green);
+  background: var(--eerie-black-2);
+  color: var(--neon-green);
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 140px;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.category-item.active .category-btn,
+.category-btn:hover {
+  background: var(--neon-green);
+  color: var(--smoky-black);
+}
+
+.take-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.take-item {
+  width: 100%;
+}
+
+.take-card {
+  padding: 15px;
+  border: 1px solid var(--neon-green);
+  background: var(--bg-gradient-jet);
+  box-shadow: var(--shadow-1);
+}
+
+@media (max-width: 600px) {
+  .category-btn {
+    max-width: 100%;
+    font-size: var(--fs-7);
+    padding: 8px;
+  }
+}
+/* Ensure only the active take group is shown */
+.take-group {
+  display: none;
+}
+
+.take-group.active {
+  display: block;
 }
