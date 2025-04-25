@@ -2276,3 +2276,14 @@ textarea.form-input::-webkit-resizer { display: none; }
   height: 120px;
   object-fit: cover;
 }
+
+.service-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 15px var(--neon-green), 0 0 30px var(--neon-green);
+  background: var(--bg-gradient-green-2);
+}
