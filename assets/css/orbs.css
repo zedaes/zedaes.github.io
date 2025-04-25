@@ -50,7 +50,7 @@
     height: var(--circle-size);
     top: calc(50% - var(--circle-size) / 2);
     left: calc(50% - var(--circle-size) / 2);
-    opacity: 0.4;
+    opacity: 0.8;
   }
   
   .g1 { animation: moveVertical 15s ease infinite; }
