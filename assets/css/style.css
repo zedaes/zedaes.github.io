@@ -1625,7 +1625,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .testimonials-avatar-box {
     transform: translate(30px, -30px);
-    border-radius: 20px;
+    border-radius: 0;
   }
 
   .testimonials-avatar-box img { width: 80px; }
@@ -1660,7 +1660,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .modal-avatar-box {
-    border-radius: 18px;
+    border-radius: 0;
     margin-bottom: 0;
   }
 
