@@ -990,7 +990,7 @@ main {
   height: 6px;
   width: 6px;
   background: var(--text-gradient-green);
-  border-radius: 50%;
+  border-radius: 0;
   box-shadow: 0 0 0 4px var(--jet);
 }
 
