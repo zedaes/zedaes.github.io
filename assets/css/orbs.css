@@ -53,20 +53,20 @@
     opacity: 0.4;
   }
   
-  .g1 { animation: moveVertical 30s ease infinite; }
+  .g1 { animation: moveVertical 15s ease infinite; }
   .g2 {
     transform-origin: calc(50% - 400px);
-    animation: moveInCircle 20s reverse infinite;
+    animation: moveInCircle 10s reverse infinite;
   }
   .g3 {
     top: calc(50% - var(--circle-size) / 2 + 200px);
     left: calc(50% - var(--circle-size) / 2 - 500px);
     transform-origin: calc(50% + 400px);
-    animation: moveInCircle 40s linear infinite;
+    animation: moveInCircle 20s linear infinite;
   }
   .g4 {
     transform-origin: calc(50% - 200px);
-    animation: moveHorizontal 40s ease infinite;
+    animation: moveHorizontal 20s ease infinite;
     opacity: 0.25;
   }
   .g5 {
@@ -75,61 +75,63 @@
     top: calc(50% - var(--circle-size));
     left: calc(50% - var(--circle-size));
     transform-origin: calc(50% - 800px) calc(50% + 200px);
-    animation: moveInCircle 20s ease infinite;
+    animation: moveInCircle 10s ease infinite;
   }
   
   /* Extra glowing orbs */
   .g6 {
     top: 10%;
     left: 20%;
-    animation: moveInCircle 30s ease-in-out infinite;
+    animation: moveInCircle 15s ease-in-out infinite;
   }
   .g7 {
     top: 60%;
     left: 70%;
-    animation: moveInCircle 35s reverse infinite;
+    animation: moveInCircle 18s reverse infinite;
   }
   .g8 {
     top: 30%;
     left: 80%;
-    animation: moveVertical 25s ease-in-out infinite;
+    animation: moveVertical 12s ease-in-out infinite;
   }
   .g9 {
     top: 80%;
     left: 10%;
-    animation: moveHorizontal 28s ease-in-out infinite;
+    animation: moveHorizontal 14s ease-in-out infinite;
   }
   .g10 {
     top: 15%;
     left: 50%;
-    animation: moveInCircle 50s linear infinite;
+    animation: moveInCircle 25s linear infinite;
   }
+  
   /* Additional glowing orbs */
-.g11 {
+  .g11 {
     top: 25%;
     left: 30%;
-    animation: moveInCircle 45s ease-in-out infinite;
-}
-.g12 {
+    animation: moveInCircle 22s ease-in-out infinite;
+  }
+  .g12 {
     top: 70%;
     left: 40%;
-    animation: moveVertical 32s ease infinite;
-}
-.g13 {
+    animation: moveVertical 16s ease infinite;
+  }
+  .g13 {
     top: 50%;
     left: 90%;
-    animation: moveHorizontal 38s ease-in-out infinite;
-}
-.g14 {
+    animation: moveHorizontal 19s ease-in-out infinite;
+  }
+  .g14 {
     top: 5%;
     left: 60%;
-    animation: moveInCircle 55s reverse infinite;
-}
-.g15 {
+    animation: moveInCircle 27s reverse infinite;
+  }
+  .g15 {
     top: 85%;
     left: 15%;
-    animation: moveVertical 40s linear infinite;
-}
+    animation: moveVertical 20s linear infinite;
+  }
+  
 
   
   .interactive {
