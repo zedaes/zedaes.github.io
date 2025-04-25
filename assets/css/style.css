@@ -2260,3 +2260,19 @@ textarea.form-input::-webkit-resizer { display: none; }
 .take-group.active {
   display: block;
 }
+
+/* Force navbar to stay rectangular on all screens */
+.navbar {
+  border-radius: 0 !important;
+}
+
+/* Make avatar/profile picture square */
+.avatar-box {
+  border-radius: 0 !important;
+}
+
+.avatar-box img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
