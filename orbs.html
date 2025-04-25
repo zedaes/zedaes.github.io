@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Orb Playground</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/orbs.css" />
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+  <!-- Orb Gradient Background -->
+   <!-- Add this inside the body tag, just above the gradient background -->
+    <div class="fade-text">Have fun!</div>
+
+  <div class="gradient-bg">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+    <div class="gradients-container">
+      <div class="g1"></div>
+      <div class="g2"></div>
+      <div class="g3"></div>
+      <div class="g4"></div>
+      <div class="g5"></div>
+      <div class="g6"></div>
+      <div class="g7"></div>
+      <div class="g8"></div>
+      <div class="g9"></div>
+      <div class="g10"></div>
+      <div class="interactive"></div>
+    </div>
+  </div>
+
+  <!-- UI Controls -->
+  <div class="ui-controls">
+    <button id="musicToggle" title="Toggle Music">
+      <ion-icon id="musicIcon" name="volume-high-outline"></ion-icon>
+    </button>
+    <a href="index.html" class="home-btn" title="Go Home">
+      <ion-icon name="home-outline"></ion-icon>
+    </a>
+  </div>
+
+  <!-- Audio -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="./assets/audio/orbs.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- JavaScript -->
+  <script src="./assets/js/orbs.js" defer></script>
+</body>
+</html>
