@@ -7,7 +7,7 @@
     --color4: 0, 255, 0;
     --color5: 0, 255, 0;
     --color-interactive: 0, 255, 0;
-    --circle-size: 120%;
+    --circle-size: 100%;
     --blending: hard-light;
   }
   
@@ -50,7 +50,7 @@
     height: var(--circle-size);
     top: calc(50% - var(--circle-size) / 2);
     left: calc(50% - var(--circle-size) / 2);
-    opacity: 0.8;
+    opacity: 0.4;
   }
   
   .g1 { animation: moveVertical 15s ease infinite; }
@@ -105,32 +105,6 @@
     animation: moveInCircle 25s linear infinite;
   }
   
-  /* Additional glowing orbs */
-  .g11 {
-    top: 25%;
-    left: 30%;
-    animation: moveInCircle 22s ease-in-out infinite;
-  }
-  .g12 {
-    top: 70%;
-    left: 40%;
-    animation: moveVertical 16s ease infinite;
-  }
-  .g13 {
-    top: 50%;
-    left: 90%;
-    animation: moveHorizontal 19s ease-in-out infinite;
-  }
-  .g14 {
-    top: 5%;
-    left: 60%;
-    animation: moveInCircle 27s reverse infinite;
-  }
-  .g15 {
-    top: 85%;
-    left: 15%;
-    animation: moveVertical 20s linear infinite;
-  }
   
 
   
@@ -142,7 +116,7 @@
     height: 100%;
     top: -50%;
     left: -50%;
-    opacity: 0.7;
+    opacity: 0.9;
   }
   
   @keyframes moveInCircle {
@@ -204,7 +178,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: bold;
   color: rgb(0, 255, 0); /* Bright green color */
   animation: fadeOut 3s forwards;
