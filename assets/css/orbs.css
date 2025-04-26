@@ -180,7 +180,7 @@
   transform: translate(-50%, -50%);
   font-size: 6rem;
   font-weight: bold;
-  color: rgb(0, 0, 0); /* Bright green color */
+  color: rgb(0, 255, 0); /* Bright green color */
   animation: fadeOut 3s forwards;
   z-index: 1000;
 }
