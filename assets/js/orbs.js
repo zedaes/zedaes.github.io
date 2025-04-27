@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Interactive bubble logic
     const interBubble = document.querySelector('.interactive');
     let curX = 0, curY = 0, tgX = 0, tgY = 0;
     let isDragging = false;
@@ -11,13 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animate);
     }
 
-    // Mouse movement
     window.addEventListener('mousemove', ({ clientX, clientY }) => {
         tgX = clientX;
         tgY = clientY;
     });
 
-    // Touch movement
     window.addEventListener('touchstart', (e) => {
         isDragging = true;
         handleTouchMove(e);
@@ -26,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('touchmove', (e) => {
         if (isDragging) {
             handleTouchMove(e);
-            e.preventDefault(); // Prevent scrolling
+            e.preventDefault(); 
         }
     });
 
@@ -42,15 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animate();
 
-    // Music controls
     const music = document.getElementById('bgMusic');
     const musicToggle = document.getElementById('musicToggle');
     const musicIcon = document.getElementById('musicIcon');
     
-    // More reliable autoplay handling
     const handleAutoplay = () => {
         music.play().catch(() => {
-            // Show UI indication that interaction is needed
             musicToggle.classList.add('requires-interaction');
         });
     };
@@ -62,16 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
         musicIcon.setAttribute('name', music.paused ? 'volume-mute-outline' : 'volume-high-outline');
     });
 
-    // Initialize icon state
-    // musicIcon.setAttribute('name', music.paused ? 'volume-mute-outline' : 'volume-high-outline');
-
-    // Tab handling for navigation links (added feature)
     document.querySelectorAll('.navbar-link[data-nav-link]').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const newWindow = window.open(link.href, '_blank');
             
-            // Only attempt to close if we have permission
             try {
                 if (window.opener) window.close();
             } catch (err) {
