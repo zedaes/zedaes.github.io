@@ -136,13 +136,13 @@ const categoryItems = document.querySelectorAll('.category-item');
 const takeGroups = document.querySelectorAll('.take-group');
 
 categoryItems.forEach(item => {
-  item.addEventListener('click', function() {
+  item.addEventListener('click', function () {
     const category = this.dataset.category;
-    
+
     // Update active category
     categoryItems.forEach(c => c.classList.remove('active'));
     this.classList.add('active');
-    
+
     // Show selected take group
     takeGroups.forEach(group => {
       group.classList.remove('active');
